@@ -1,0 +1,51 @@
+body {
+  background-image: url('https://i.pinimg.com/originals/46/ca/19/46ca199f6acdaf6f85811db17e9ed2af.gif');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 48px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#no {
+  position: absolute;
+  transition: top 0.3s, left 0.3s;
+}
+
+.firework {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  animation: firework 1s linear infinite;
+}
+
+@keyframes firework {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -100vh) rotate(360deg) scale(0);
+    opacity: 0;
+  }
+}
